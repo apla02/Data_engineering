@@ -41,24 +41,17 @@ Requirements
 
 ● Number of employees hired for each job and department in 2021 divided by quarter. The
 table must be ordered alphabetically by department and job.
-Output example:
-department job Q1 Q2 Q3 Q4
-Staff Recruiter 3 0 7 11
-Staff Manager 2 1 0 2
-Supply Chain Manager 0 1 3 0
+
 
 ● List of ids, name and number of employees hired of each department that hired more
 employees than the mean of employees hired in 2021 for all the departments, ordered
 by the number of employees hired (descending).
-Output example:
-id department hired
-7 Staff 45
-9 Supply Chain 12
 
 Bonus Track! Cloud, Testing & Containers
 Add the following to your solution to make it more robust:
 ● Host your architecture in any public cloud (using the services you consider more
 adequate)
+
 ● Add automated tests to the API
 ○ You can use whichever library that you want
 
