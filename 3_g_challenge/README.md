@@ -61,8 +61,14 @@ adequate)
 
 Using Docker
 
+- Install Docker and start the service
+sudo service docker start
+
 - From #_g_challenge folder build the Docker file using this command
 docker build -t myflaskapp .
+
+- Check de image
+docker ps -a
 
 - Run the application
 docker run -p 5000:5000 myflaskapp
