@@ -1,7 +1,7 @@
 
 # Challenge
 
-## Section 1: API
+Starting...
 
 1. Clone this repo in yout local machine
 
@@ -18,9 +18,9 @@ pip install requirements.txt
 4. Run the app
 Python app.py
 
-# Tasks
+## Tasks
 
-## Section 1
+### Section 1: API
 
 -  In the context of a DB migration with 3 different tables (departments, jobs, employees) , create
 a local REST API that must:
@@ -31,11 +31,11 @@ a local REST API that must:
 
 
 Clarifications
-● You decide the origin where the CSV files are located.
-● You decide the destination database type, but it must be a SQL database.
-● The CSV file is comma separated.
+- You decide the origin where the CSV files are located.
+- You decide the destination database type, but it must be a SQL database.
+- The CSV file is comma separated.
 
-## Section 2: SQL
+### Section 2: SQL
 You need to explore the data that was inserted in the previous section. The stakeholders ask
 for some specific metrics they need. You should create an end-point for each requirement.
 Requirements
@@ -48,7 +48,7 @@ table must be ordered alphabetically by department and job.
 employees than the mean of employees hired in 2021 for all the departments, ordered
 by the number of employees hired (descending).
 
-## Bonus Track! Cloud, Testing & Containers
+### Bonus Track! Cloud, Testing & Containers
 Add the following to your solution to make it more robust:
 ### Host your architecture in any public cloud (using the services you consider more
 adequate)
