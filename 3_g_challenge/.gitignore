@@ -1,6 +1,6 @@
 
 .g_env/
-__pycache__/
+__pycache__
 uploads/
 instance/
 company.db
@@ -10,5 +10,5 @@ data_challenge_files/
 dist/
 build/
 instance/
-
+*.egg-info/
 
