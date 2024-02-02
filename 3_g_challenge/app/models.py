@@ -1,5 +1,4 @@
 from flask import url_for
-from sqlalchemy.exc import IntegrityError
 from app import db
 
 

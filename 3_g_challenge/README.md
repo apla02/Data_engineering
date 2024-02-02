@@ -34,15 +34,17 @@ a local REST API that must:
 You need to publish your code in GitHub. It will be taken into account if frequent updates are
 made to the repository that allow analyzing the development process. Ideally, create a
 markdown file for the Readme.md
+
 Clarifications
 ● You decide the origin where the CSV files are located.
 ● You decide the destination database type, but it must be a SQL database.
 ● The CSV file is comma separated.
 
-Section 2: SQL
+## Section 2: SQL
 You need to explore the data that was inserted in the previous section. The stakeholders ask
 for some specific metrics they need. You should create an end-point for each requirement.
 Requirements
+
 ● Number of employees hired for each job and department in 2021 divided by quarter. The
 table must be ordered alphabetically by department and job.
 Output example:

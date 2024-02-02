@@ -7,15 +7,6 @@ from multiprocessing import Value
 global_record_count = Value('i', 0)
 
 
-def create_tables():
-    """
-    This functions creates the local database using SQLite and SqlAlquemy ORM
-    """
-    db.create_all()
-
-#def process_csv(file_path):
-    #return pd.read_csv(file_path)
-
 def upload_data_to_db(file_path, batch_size=1000):
     
     global global_record_count
@@ -33,10 +24,10 @@ def upload_data_to_db(file_path, batch_size=1000):
         
         chunks = pd.read_csv(file_path, names = dict_atributtes[table_name], chunksize=batch_size)
         try:
-            #chunk.to_sql(table_name, db.engine, if_exists= 'append', index=False)
             
             for chunk in chunks:
                 chunk.to_sql(table_name, db.engine, if_exists= 'append', index=False)
+                print(f"Number of records in the current chunk: {len(chunk)}")
                 with global_record_count.get_lock():
                     global_record_count.value += len(chunk)
             
@@ -47,9 +38,8 @@ def upload_data_to_db(file_path, batch_size=1000):
             print(f"Error uploading data to the database: {str(e)}")
             db.session.rollback()
 
- 
 
-def insert_batch_transactions(df):
+def exploring_data():
     pass
 
 
