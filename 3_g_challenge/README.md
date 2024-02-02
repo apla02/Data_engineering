@@ -15,11 +15,12 @@ activate genv/bin/activate
 
 pip install requirements.txt
 
-
 4. Run the app
 Python app.py
 
-Tasks
+# Tasks
+
+## Section 1
 
 -  In the context of a DB migration with 3 different tables (departments, jobs, employees) , create
 a local REST API that must:
@@ -39,50 +40,22 @@ You need to explore the data that was inserted in the previous section. The stak
 for some specific metrics they need. You should create an end-point for each requirement.
 Requirements
 
-● Number of employees hired for each job and department in 2021 divided by quarter. The
+- Number of employees hired for each job and department in 2021 divided by quarter. The
 table must be ordered alphabetically by department and job.
 
 
-● List of ids, name and number of employees hired of each department that hired more
+- List of ids, name and number of employees hired of each department that hired more
 employees than the mean of employees hired in 2021 for all the departments, ordered
 by the number of employees hired (descending).
 
-Bonus Track! Cloud, Testing & Containers
+## Bonus Track! Cloud, Testing & Containers
 Add the following to your solution to make it more robust:
-● Host your architecture in any public cloud (using the services you consider more
+### Host your architecture in any public cloud (using the services you consider more
 adequate)
 
-● Add automated tests to the API
-○ You can use whichever library that you want
+### Add automated tests to the API
+- You can use whichever library that you want
 
-○ Different tests types, if necessary, are welcome
-● Containerize your application
-○ Create a Dockerfile to deploy the package
-
-Csv files structures
-hired_employees.csv:
-id INTEGER Id of the employee
-name STRING Name and surname of the employee
-datetime STRING Hire datetime in ISO format
-department_id INTEGER Id of the department which the employee was hired for
-job_id INTEGER Id of the job which the employee was hired for
-
-4535,Marcelo Gonzalez,2021-07-27T16:02:08Z,1,2
-4572,Lidia Mendez,2021-07-27T19:04:09Z,1,2
-File hired_employees.csv should be attached by recruiter
-departments.csv
-id INTEGER Id of the department
-department STRING Name of the department
-
-1, Supply Chain
-2, Maintenance
-3, Staff
-File departments.csv should be attached by recruiter
-jobs.csv:
-id INTEGER Id of the job
-job STRING Name of the job
-
-1, Recruiter
-2, Manager
-3, Analyst
-File jobs.csv should be attached by recruiter  
+### Different tests types, if necessary, are welcome
+- Containerize your application
+- Create a Dockerfile to deploy the package
