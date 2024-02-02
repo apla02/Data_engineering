@@ -142,14 +142,3 @@ def departments_with_more_employees_hired_than_avg():
 
     response = {'employees_by_department_and_job_2021': departments_with_more_employees_hired_than_avg}
     return jsonify(response) 
-
-
-
-
-
-
-
-
-
-
-
