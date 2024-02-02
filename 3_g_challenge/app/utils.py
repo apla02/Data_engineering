@@ -39,8 +39,7 @@ def upload_data_to_db(file_path, batch_size=1000):
             db.session.rollback()
 
 
-def exploring_data():
-    pass
+    
 
 
 

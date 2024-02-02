@@ -1,5 +1,5 @@
-from app import app
-
+from app import app, db
+from flask import make_response, jsonify
 
 """from flask import Flask, make_response, jsonify
 from flask_cors import CORS
@@ -13,10 +13,10 @@ cors = CORS(app, resources={r"/*": {"origins": "0.0.0.0"}})"""
 with app.app_context():
     db.create_all()
 
-@app.errorhandler(404)
+'''@app.errorhandler(404)
 def not_found(error):
     """handle error 404: Not found"""
-    return make_response(jsonify({"error": "Not found"}), 404)
+    return make_response(jsonify({"error": "Not found"}), 404)'''
 
 
 

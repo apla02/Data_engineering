@@ -3,8 +3,8 @@ from app import db
 
 
 class Department(db.Model):
-    id = db.Column(db.Integer, nullable=False, primary_key=True)
-    department = db.Column(db.String(256))
+    id = db.Column(db.Integer, unique=True, nullable=False, primary_key=True)
+    department = db.Column(db.String(256), nullable=False)
     # jobs = relationship('Job', back_populates ='department')
     # employees = relationship('Employee', back_populates = 'department')
 
@@ -13,15 +13,15 @@ class Department(db.Model):
         return f'<Department {self.name}>'
 
 class Job(db.Model):
-    id = db.Column(db.Integer, nullable=False, primary_key=True)
-    job =  db.Column(db.String)
+    id = db.Column(db.Integer, unique=True, nullable=False, primary_key=True)
+    job =  db.Column(db.String, nullable=False)
     
     def __repr__(self):
-        return f'<Department {self.job}>'
+        return f'<Job {self.job}>'
 
 
 class Employee(db.Model):
-    id = db.Column(db.Integer, nullable=False, primary_key=True)
+    id = db.Column(db.Integer, unique=True, nullable=False, primary_key=True)
     name = db.Column(db.String(256)) 
     datetime = db.Column(db.DateTime(timezone=True))
     department_id= db.Column(db.Integer, db.ForeignKey('department.id'))
