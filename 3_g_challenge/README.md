@@ -58,4 +58,13 @@ adequate)
 
 ### Different tests types, if necessary, are welcome
 - Containerize your application
-- Create a Dockerfile to deploy the package
+
+Using Docker
+
+- From #_g_challenge folder build the Docker file using this command
+docker build -t myflaskapp .
+
+- Run the application
+docker run -p 5000:5000 myflaskapp
+
+
