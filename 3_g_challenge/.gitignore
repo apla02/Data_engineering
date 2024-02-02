@@ -1,0 +1,14 @@
+
+.g_env/
+__pycache__/
+uploads/
+instance/
+company.db
+data_challenge_files/
+.pytest_cache/
+*.pyc
+dist/
+build/
+instance/
+
+
