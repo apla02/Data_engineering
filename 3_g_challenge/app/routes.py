@@ -3,7 +3,7 @@ from werkzeug.utils import secure_filename
 from app import app, db
 from app.utils import upload_data_to_db
 from sqlalchemy import text, func
-from app.models import Department, Job, Employee
+import os
 
 
 UPLOAD_FOLDER = './uploads/'
@@ -56,7 +56,7 @@ def upload_file():
 
     
 
-@app.route('/employees_departments_jobs', methods=['GET'])
+@app.route('/employees_by_departments_jobs', methods=['GET'])
 def get_employees_by_department_and_job_2021():
 
     """
@@ -105,7 +105,7 @@ def get_employees_by_department_and_job_2021():
         return jsonify({'error': str(e)})
 
 
-@app.route('/departments', methods=['GET'])
+@app.route('/departments_employees_hired', methods=['GET'])
 def departments_with_more_employees_hired_than_avg():
 
     """List of ids, name and number of employees hired of each department that hired more
