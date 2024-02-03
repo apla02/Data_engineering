@@ -1,22 +1,22 @@
 
 # Challenge
 
-Starting...
+### Starting...
 
 1. Clone this repo in yout local machine
 
 2. create a new local environment and activcate it
 
-python -m g_env 
+    - python -m g_env 
 
-activate genv/bin/activate
+    - activate genv/bin/activate
 
 3. install all of the requirements
 
-pip install requirements.txt
+    - pip install requirements.txt
 
 4. Run the app
-Python app.py
+    - Python app.py
 
 ## Tasks
 
@@ -50,27 +50,29 @@ by the number of employees hired (descending).
 
 ### Bonus Track! Cloud, Testing & Containers
 Add the following to your solution to make it more robust:
+
+### Containerize your application
+
+Using Docker
+
+- Install Docker and start the service =>
+    - sudo service docker start
+
+- From #_g_challenge folder build the Docker file using this command
+    - docker build -t myflaskapp .
+
+- Check de image
+    - docker ps -a
+
+- Run the application
+    - docker run -p 5000:5000 myflaskapp
+
 ### Host your architecture in any public cloud (using the services you consider more
-adequate)
+adequate) (pending)
 
 ### Add automated tests to the API
 - You can use whichever library that you want
 
-### Different tests types, if necessary, are welcome
-- Containerize your application
-
-Using Docker
-
-- Install Docker and start the service
-sudo service docker start
-
-- From #_g_challenge folder build the Docker file using this command
-docker build -t myflaskapp .
-
-- Check de image
-docker ps -a
-
-- Run the application
-docker run -p 5000:5000 myflaskapp
+Different tests types, if necessary, are welcome (pending)
 
 
